@@ -1,8 +1,11 @@
 #! /usr/bin/env python3
 
 import hashlib
+import pickle
 import subprocess
 import sys
+
+testcases_file = 'testcases.p'
 
 testcases = {
     '01': '9f71f98eec1ba526da6db07923748b2636838c90ce8fc54497894dac79e3ccd0e0fedcbc5e918c994552a87c8f7ae78b3c0efe4f21d227d843fab1d69e63f5f1',
@@ -85,9 +88,9 @@ if __name__ == '__main__':
             answer = sha512(output.strip())
             answers[testcase] = answer
 
-        import pprint
-        pp = pprint.PrettyPrinter(indent=4)
-        pp.pprint(answers)
+        data = (file, answers)
+        with open(testcases_file, 'wb') as f:
+            pickle.dump(data, f)
     else: # Normally check program
         file = args[1]
         check(file)
