@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python
 
 import hashlib
 import subprocess
@@ -51,7 +51,7 @@ def check(file):
     cases = testcases[challenge]
     if isinstance(cases, dict): # Multiple inputs
         for case, expected in cases.items():
-            output = run(['python3', file], case)
+            output = run(['python', file], case)
             actual = sha512(output.strip())
 
             if actual != expected:
@@ -63,7 +63,7 @@ def check(file):
         else:
             print('All answers correct, way to go!  ' + happy)
     else: # Single (no input)
-        output = run(['python3', file])
+        output = run(['python', file])
         print('Your output:')
         print(output)
 
@@ -91,7 +91,7 @@ if __name__ == '__main__':
         answers = {}
         for i in range(3, argc):
             testcase = args[i]
-            output = run(['python3', file], testcase)
+            output = run(['python', file], testcase)
             answer = sha512(output.strip())
             answers[testcase] = answer
 
