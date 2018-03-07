@@ -1,0 +1,17 @@
+Create your very own text-based adventure game!
+There is no right or wrong answer for this challenge. Your goal is simply to make the game fun!
+
+Some code has been given to you to get started.
+Run the game with: 'python main.py'
+
+Possible game ideas:
+    - Zombie apocalypse
+    - Find the lost princess
+    - Murder mystery
+Feature ideas:
+    - Create a map system for the game
+    - Create enemies with an AI
+    - Items for the character (pick up, use, put into inventory, etc)
+    - A point system
+    - Health system
+
