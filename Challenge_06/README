@@ -2,7 +2,7 @@ Create your very own text-based adventure game!
 There is no right or wrong answer for this challenge. Your goal is simply to make the game fun!
 
 Some code has been given to you to get started.
-Run the game with: 'python main.py'
+Run the game with: 'python __main__.py'
 
 Possible game ideas:
     - Zombie apocalypse
