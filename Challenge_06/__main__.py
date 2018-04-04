@@ -3,14 +3,13 @@ from util import *
 from game import game
 import commands
 
-prologue = '''Example Game.
-Type 'help' for a list of commands.
-Type 'quit' to end the game.'''
-
 # Run this code before the game starts
 def setup():
-    print(prologue)
     name = input('Enter your name: ')
+    print()
+    print('''Welcome %s, to Example Game!
+Type 'help' for a list of commands.
+Type 'quit' to end the game.''' % name)
     x, y = game.start
     game.player = Player(x, y, name)
     print()
